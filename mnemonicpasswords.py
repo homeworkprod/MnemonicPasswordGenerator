@@ -33,4 +33,5 @@ def generate_password(letters=8, digits=4, uppercase=False):
 if __name__ == '__main__':
     print 'Generating sample passwords with alternating case:'
     for i in range(10):
-        print generate_password(uppercase=i%2)
+        uppercase = i % 2
+        print generate_password(uppercase=uppercase)
