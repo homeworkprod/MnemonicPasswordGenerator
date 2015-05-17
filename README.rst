@@ -7,6 +7,7 @@ of their length.
 :Copyright: 2004-2015 `Jochen Kupperschmidt <http://homework.nwsnet.de/>`_
 :Date: 17-May-2015 (original release: 27-Jul-2004)
 :License: GNU General Public License version 2, see LICENSE for details.
+:Version: 0.1
 
 ::
 
