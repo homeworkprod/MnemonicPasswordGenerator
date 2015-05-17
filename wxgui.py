@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-"""wxgui.py -- Version 04-Feb-2006
+"""wxgui.py -- Version 17-May-2015
 
 A graphical frontend to the Mnemonic Password Generator in wxPython.
 
@@ -49,17 +49,17 @@ class ControlsPanel(wx.Panel):
         self.SetSizer(sizer)
 
         # Bind controls' events.
-        self.letterCount.Bind(wx.EVT_SLIDER, self.OnSettingsChange)
-        self.digitCount.Bind(wx.EVT_SLIDER, self.OnSettingsChange)
-        self.uppercase.Bind(wx.EVT_CHECKBOX, self.OnSettingsChange)
-        button.Bind(wx.EVT_BUTTON, self.OnSettingsChange)
+        self.letterCount.Bind(wx.EVT_SLIDER, self.on_settingsChange)
+        self.digitCount.Bind(wx.EVT_SLIDER, self.on_settingsChange)
+        self.uppercase.Bind(wx.EVT_CHECKBOX, self.on_settingsChange)
+        button.Bind(wx.EVT_BUTTON, self.on_settingsChange)
 
-        self.OnSettingsChange()
+        self.on_settingsChange()
 
-    def OnSettingsChange(self, evt=None):
+    def on_settingsChange(self, evt=None):
         """Refresh password according to the current settings."""
         self.password.SetValue(
-            mnemonicpasswords.generateMnemonicPassword(
+            mnemonicpasswords.generate_password(
                 self.letterCount.GetValue(),
                 self.digitCount.GetValue(),
                 self.uppercase.GetValue()))
@@ -79,7 +79,7 @@ class SliderPanel(wx.Panel):
             style=wx.SL_AUTOTICKS)
 
         # Bind slider event.
-        self.slider.Bind(wx.EVT_SLIDER, self.OnSlide)
+        self.slider.Bind(wx.EVT_SLIDER, self.on_slide)
 
         # Arrange controls.
         sizer = wx.FlexGridSizer(1, 2, 4, 4)
@@ -88,9 +88,9 @@ class SliderPanel(wx.Panel):
         sizer.AddGrowableCol(1)
         self.SetSizer(sizer)
 
-        self.OnSlide(value)
+        self.on_slide(value)
 
-    def OnSlide(self, evt=None):
+    def on_slide(self, evt=None):
         self.label.SetLabel(str(self.slider.GetValue()))
 
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-"""tkintergui.py -- Version 04-Feb-2006
+"""tkintergui.py -- Version 17-May-2015
 
 A graphical frontend to the Mnemonic Password Generator in Tkinter.
 
@@ -38,14 +38,14 @@ class MnemonicPasswordFrame(tk.Frame):
                 textvariable=self.password)),
             ('Letters:', NumberSlider(self,
                 variable=self.letterCount,
-                command=self.updatePassword)),
+                command=self.update_password)),
             ('Digits:', NumberSlider(self,
                 variable=self.digitCount,
-                command=self.updatePassword)),
+                command=self.update_password)),
             ('Case:', tk.Checkbutton(self,
                 text='uppercase',
                 variable=self.uppercase,
-                command=self.updatePassword))
+                command=self.update_password))
             ]
         for i in range(len(controls)):
             label, widget = controls[i]
@@ -57,13 +57,13 @@ class MnemonicPasswordFrame(tk.Frame):
         # Create refresh button.
         tk.Button(self,
             text='Generate another password',
-            command=self.updatePassword
+            command=self.update_password
         ).grid(row=4, column=0, columnspan=2, sticky=tk.W+tk.E)
 
-    def updatePassword(self, value=None):
+    def update_password(self, value=None):
         """Refresh password according to the current selection."""
         self.password.set(
-            mnemonicpasswords.generateMnemonicPassword(
+            mnemonicpasswords.generate_password(
                 self.letterCount.get(),
                 self.digitCount.get(),
                 self.uppercase.get()))

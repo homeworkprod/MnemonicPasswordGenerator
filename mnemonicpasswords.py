@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-"""mnemonicpasswords.py -- Version 04-Feb-2006
+"""mnemonicpasswords.py -- Version 17-May-2015
 
 Generate pronounceable and thereby easier remembered passwords despite of
 their length.
@@ -21,7 +21,7 @@ import random
 CHARSET = ('bdfghklmnprstvwz', 'aeiou') # consonants, vowels
 
 
-def generateMnemonicPassword(letters=8, digits=4, uppercase=False):
+def generate_password(letters=8, digits=4, uppercase=False):
     """Generate a random mnemonic password."""
     chars = ''.join([random.choice(CHARSET[i % 2]) for i in range(letters)])
     if uppercase:
@@ -33,4 +33,4 @@ def generateMnemonicPassword(letters=8, digits=4, uppercase=False):
 if __name__ == '__main__':
     print 'Generating sample passwords with alternating case:'
     for i in range(10):
-        print generateMnemonicPassword(uppercase=i%2)
+        print generate_password(uppercase=i%2)
