@@ -4,13 +4,8 @@
 
 A graphical frontend to the Mnemonic Password Generator in wxPython.
 
-Copyright (c) 2004-2006 Jochen Kupperschmidt <webmaster@nwsnet.de>
-Released under the terms of the GNU General Public License
-  _                               _
- | |_ ___ _____ ___ _ _ _ ___ ___| |_
- |   | . |     | ._| | | | . |  _| . /
- |_|_|___|_|_|_|___|_____|___|_| |_|_\
-   http://homework.nwsnet.de/
+:Copyright: 2004-2015 `Jochen Kupperschmidt <http://homework.nwsnet.de/>`_
+:License: GNU General Public License version 2, see LICENSE for details.
 """
 
 import wx
