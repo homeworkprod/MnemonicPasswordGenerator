@@ -14,6 +14,7 @@ Released under the terms of the GNU General Public License
    http://homework.nwsnet.de/
 """
 
+from itertools import chain
 from random import choice, randrange
 
 
@@ -24,11 +25,14 @@ VOWELS = 'aeiou'
 
 def generate_password(letters=8, digits=4, uppercase=False):
     """Generate a random mnemonic password."""
-    chars = ''.join(_generate_letters(letters))
+    chars = chain(_generate_letters(letters),
+                  _generate_digits(digits))
+    password = ''.join(chars)
+
     if uppercase:
-        chars = chars.upper()
-    chars += ''.join(_generate_digits(digits))
-    return chars
+        password = password.upper()
+
+    return password
 
 
 def _generate_letters(n):
