@@ -18,7 +18,8 @@ from random import choice, randrange
 
 
 # Some consonants were left out for clarity or better pronunciation.
-CHARSET = ('bdfghklmnprstvwz', 'aeiou') # consonants, vowels
+CONSONANTS = 'bdfghklmnprstvwz'
+VOWELS = 'aeiou'
 
 
 def generate_password(letters=8, digits=4, uppercase=False):
@@ -32,7 +33,8 @@ def generate_password(letters=8, digits=4, uppercase=False):
 
 def _generate_letters(n):
     for i in range(n):
-        yield choice(CHARSET[i % 2])
+        source = CONSONANTS if (i % 2) == 0 else VOWELS
+        yield choice(source)
 
 
 def _generate_digits(n):
