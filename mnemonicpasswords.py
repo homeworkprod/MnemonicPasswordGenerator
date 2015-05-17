@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-"""mnemonicpasswords.py -- Version 17-May-2015
+"""mnemonicpasswords.py
 
 Generate pronounceable and thereby easier remembered passwords despite of
 their length.

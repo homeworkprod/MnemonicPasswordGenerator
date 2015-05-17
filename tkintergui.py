@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-"""tkintergui.py -- Version 17-May-2015
+"""tkintergui.py
 
 A graphical frontend to the Mnemonic Password Generator in Tkinter.
 

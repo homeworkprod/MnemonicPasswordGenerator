@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-"""wxgui.py -- Version 17-May-2015
+"""wxgui.py
 
 A graphical frontend to the Mnemonic Password Generator in wxPython.
 

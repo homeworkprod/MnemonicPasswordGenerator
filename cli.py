@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-"""cli.py -- Version 17-May-2015
+"""cli.py
 
 A command line interface to the Mnemonic Password Generator.
 
