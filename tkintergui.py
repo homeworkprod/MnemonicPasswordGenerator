@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 """
 A graphical frontend to the Mnemonic Password Generator in Tkinter.
