@@ -23,10 +23,10 @@ CHARSET = ('bdfghklmnprstvwz', 'aeiou') # consonants, vowels
 
 def generate_password(letters=8, digits=4, uppercase=False):
     """Generate a random mnemonic password."""
-    chars = ''.join([choice(CHARSET[i % 2]) for i in range(letters)])
+    chars = ''.join(choice(CHARSET[i % 2]) for i in range(letters))
     if uppercase:
         chars = chars.upper()
-    chars += ''.join([str(randrange(0, 9)) for i in range(digits)])
+    chars += ''.join(str(randrange(0, 9)) for i in range(digits))
     return chars
 
 
