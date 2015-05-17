@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-"""nogui.py -- Version 04-Feb-2006
+"""cli.py -- Version 04-Feb-2006
 
 A command line interface to the Mnemonic Password Generator.
 

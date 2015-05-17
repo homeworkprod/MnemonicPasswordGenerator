@@ -30,11 +30,11 @@ Requirements
 Files
 -----
 
+``cli.py``
+    A command line interface.
+
 ``mnemonicpasswords.py``
     The core module that provides the password generation functionality.
-
-``nogui.py``
-    A command line interface.
 
 ``README.rst``
     This text.
