@@ -61,11 +61,11 @@ def parse_options():
 
 
 def generate_passwords(total, letters, digits, uppercase):
-    for i in range(options.passwords):
+    for i in range(total):
         yield mnemonicpasswords.generate_password(
-            letters=options.letters,
-            digits=options.digits,
-            uppercase=options.uppercase)
+            letters=letters,
+            digits=digits,
+            uppercase=uppercase)
 
 
 if __name__ == '__main__':
