@@ -61,7 +61,7 @@ def parse_options():
 
 
 def generate_passwords(total, letters, digits, uppercase):
-    for i in range(total):
+    for _ in range(total):
         yield mnemonicpasswords.generate_password(
             letters=letters,
             digits=digits,

@@ -37,7 +37,7 @@ def _generate_letters(n):
 
 
 def _generate_digits(n):
-    for i in range(n):
+    for _ in range(n):
         yield str(randrange(0, 9))
 
 
